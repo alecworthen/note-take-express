@@ -1,6 +1,6 @@
 const express = require('express');
-const htmlRoutes = require('./Challenge/routes/html.routes');
-const apiRoutes = require('./Challenge/routes/api-routes');
+const htmlRoutes = require('./routes/html.routes');
+const apiRoutes = require('./routes/api-routes');
 const PORT = process.env.PORT || 3001;
 
 const app = express();

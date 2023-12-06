@@ -2,11 +2,13 @@ const router = require('express').Router();
 const path = require('path');
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    const absolutePath = path.join(__dirname, '../public/index.html');
+    res.sendFile(absolutePath);
 });
 
-router.get('/notes', (req,res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
+router.get('/notes', (req, res) => {
+    const absolutePath = path.join(__dirname, '../public/notes.html');
+    res.sendFile(absolutePath);
 });
 
 module.exports = router;
