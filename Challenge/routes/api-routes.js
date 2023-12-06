@@ -4,9 +4,14 @@ const fs = require('fs');
 
 router.get('/api/notes', async (req, res) => {
     const dbJson = await JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
+    res.json(dbJson);
+});
+
+router.post('/api/notes', (req, res) => {
+    const dbJson = JSON.parse(fs.readFileSync('db/db.json', 'utf8'));
     const newFeedback = {
-        title: req.body.title,
-        text: req.body.text,
+        title: req.query.title, 
+        text: req.query.text,   
         id: uuidv4()
     };
 
@@ -17,10 +22,9 @@ router.get('/api/notes', async (req, res) => {
     res.json(dbJson);
 });
 
-// Delete request below
-
+// DELETE request
 router.delete('/api/notes/:id', (req, res) => {
-    let data = fs.readFileSync('db/db.json', 'utf8');
+    const data = fs.readFileSync('./db/db.json', 'utf8');
     const dataJSON = JSON.parse(data);
 
     const newNotes = dataJSON.filter((note) => {
@@ -33,3 +37,4 @@ router.delete('/api/notes/:id', (req, res) => {
 });
 
 module.exports = router;
+
