@@ -8,6 +8,8 @@ Express JS Note Taker is a simple note taker for everyday use.
 - [Overview](#Overview)
 - [Challenge](#Challenge)
 - [Usage](#Usage)
+- [Deployment](#Deployment)
+- [Questions](#Questions)
 
 # Overview
 
@@ -47,3 +49,12 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 2. Enter the specific text you want saved on the top right.
 3. You can save what you have by clicking the save button just above the box on the right.
 4. You can add another note by pressing the "+" icon.
+
+## Deployment
+
+Here is the link to the [deployed app](https://shrouded-scrubland-27019-1b10111d96b5.herokuapp.com/). 
+
+## Questions
+If you have any questions, feel free to contact me:
+- GitHub: [alecworthen](https://github.com/alecworthen)
+- Email: alecworthen@gmail.com
